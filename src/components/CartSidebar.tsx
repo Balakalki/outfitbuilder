@@ -21,7 +21,7 @@ export default function CartSidebar() {
       </button>
 
       <div
-        className={`fixed top-0 right-0 h-screen bg-gray-100 border-l border-gray-300 w-64 transition-transform duration-300 z-40 ${
+        className={`fixed top-0 right-0 h-full bg-gray-100 border-l border-gray-300 w-64 transition-transform duration-300 z-40 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

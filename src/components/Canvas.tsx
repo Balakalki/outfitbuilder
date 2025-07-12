@@ -20,26 +20,15 @@ interface CanvasProps {
 
 export default function Canvas({ droppedItems, canvasRef }: CanvasProps) {
   const { setNodeRef } = useDroppable({ id: "canvas" });
-  const { addMultipleToCart } = useCart();
-
-  const [showPopup, setShowPopup] = useState(false);
-
-const handleAddToCart = () => {
-  addMultipleToCart(droppedItems);
-  setShowPopup(true);
-  setTimeout(() => setShowPopup(false), 2000);
-};
-
 
   return (
-    <div className="flex-1 bg-gray-200 min-h-screen p-4">
-      <h2 className="text-xl text-black font-semibold mb-4">Outfit Canvas</h2>
+    <div className="flex-1 bg-gray-200 h-[90vh] p-4">
       <div
         ref={(node) => {
           setNodeRef(node);
           if (node) canvasRef.current = node;
         }}
-        className="w-full h-[80vh] border-gray-400 bg-white relative overflow-hidden"
+        className="w-full h-full border-gray-400 bg-white rounded-lg relative overflow-hidden"
       >
         {droppedItems.map((item) => (
           <div
@@ -62,20 +51,6 @@ const handleAddToCart = () => {
           </div>
         ))}
       </div>
-      <div className="w-full p-2 border-t bg-gray-50 flex justify-center">
-    <button
-      onClick={handleAddToCart}
-      className="bg-green-600 text-white px-4 py-2 rounded shadow cursor-pointer"
-    >
-      Add Canvas to Cart
-    </button>
-    {showPopup && (
-  <div className="fixed top-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow z-50">
-    Items added to cart!
-  </div>
-)}
-
-  </div>
     </div>
   );
 }

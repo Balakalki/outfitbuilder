@@ -4,7 +4,7 @@ import { clothingItems } from "../utils/ClothingItems";
 
 export default function Sidebar({ activeId }: { activeId: string | null }) {
   return (
-    <div className="h-screen w-full sm:w-80 bg-slate-400 text-white p-4 overflow-y-auto">
+    <div className="h-full w-full sm:w-80 bg-gray-50 text-black p-4 overflow-y-auto">
       <h1 className="text-xl font-bold mb-4">Clothing Icons</h1>
 
       {Object.entries(clothingItems).map(([category, files]) => (
