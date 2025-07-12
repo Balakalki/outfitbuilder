@@ -83,7 +83,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Screenshots
 
-![alt text](<Screenshot 2025-07-12 163853.png>) ![alt text](<Screenshot 2025-07-12 163826.png>) ![alt text](<Screenshot 2025-07-12 163606.png>)
+<img width="1919" height="936" alt="Screenshot 2025-07-13 052653" src="https://github.com/user-attachments/assets/ec03d3c4-87ba-424c-ad81-ac207b2741e9" />
+
 
 ---
 
