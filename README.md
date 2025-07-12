@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Outfit Builder - Next.js Drag & Drop Assignment
+
+This is a **web-based outfit design tool** built with **Next.js** and **@dnd-kit/core**, where users can drag clothing icons onto a canvas and visually create outfit combinations. Users can then **add selected items to a cart**, view the cart in a toggleable sidebar, and remove items if needed.
+
+---
+
+##  Features
+
+- **Drag-and-Drop Clothing Items**
+  - Drag icons from the sidebar and drop them on the canvas.
+  - Precise drop placement using pointer tracking and offset correction.
+
+- **Visual Canvas for Outfits**
+  - Items retain their position, size, and style.
+  - Layered display of items with absolute positioning.
+
+- **Add to Cart Button**
+  - Clicking "Add to Cart" stores all items currently in the canvas.
+  - Cart items are displayed in a right-side floating panel.
+
+- **Floating Cart Toggle**
+  - Floating 🛒 icon toggles the cart sidebar.
+  - When open, shows cart items with remove options.
+
+- **Remove Items from Cart**
+  - Each item in the cart can be removed individually.
+
+- **UUID-based Unique Items**
+  - Uses `crypto.randomUUID()` to generate unique keys for dropped/cart items.
+
+- **Responsive UI**
+  - Works well on desktop and mobile screens.
+  - Built with Tailwind CSS for utility-first responsive styling.
+
+---
+
+## Folder Structure
+
+```
+.
+├── app/
+│   ├── page.tsx               # Home component with drag/drop logic
+│   └── layout.tsx             # App layout wrapper
+├── components/
+│   ├── Sidebar.tsx            # Clothing category icons (drag sources)
+│   ├── Canvas.tsx             # Drop zone for building outfits
+│   ├── ClothingItem.tsx       # Draggable item logic
+│   └── CartSidebar.tsx        # Right sidebar with cart
+├── context/
+│   └── CartContext.tsx        # Global cart state using React Context
+├── public/
+│   └── [category]/*.png       # Clothing icons
+├── utils/
+│   └── ClothingItems.ts       # Defines clothing categories and images
+├── styles/
+│   └── globals.css            # Tailwind CSS entry
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm (v9+)
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Screenshots
 
-## Learn More
+![alt text](<Screenshot 2025-07-12 163853.png>) ![alt text](<Screenshot 2025-07-12 163826.png>) ![alt text](<Screenshot 2025-07-12 163606.png>)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js 14 (App Router)](https://nextjs.org/)
+- [React 18](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [@dnd-kit/core](https://docs.dndkit.com/) for drag & drop logic
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
