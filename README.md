@@ -14,6 +14,14 @@ This is a **web-based outfit design tool** built with **Next.js** and **@dnd-kit
   - Items retain their position, size, and style.
   - Layered display of items with absolute positioning.
 
+  - **Save Outfit**
+  - Save your current outfit layout to `localStorage`.
+  - Automatically restored on page refresh.
+
+  - **Reset Canvas**
+  - Clears all placed items from the canvas.
+  - Also clears the saved outfit from `localStorage`.
+
 - **Add to Cart Button**
   - Clicking "Add to Cart" stores all items currently in the canvas.
   - Cart items are displayed in a right-side floating panel.
@@ -83,7 +91,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Screenshots
 
-![alt text](<Screenshot 2025-07-12 163853.png>) ![alt text](<Screenshot 2025-07-12 163826.png>) ![alt text](<Screenshot 2025-07-12 163606.png>)
+![alt text](<Screenshot 2025-07-13 052653.png>) ![alt text](<Screenshot 2025-07-13 052629.png>) ![alt text](<Screenshot 2025-07-13 052420.png>)
 
 ---
 
